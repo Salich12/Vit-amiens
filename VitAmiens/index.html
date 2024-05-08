@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="https://kit.fontawesome.com/002d626c4c.js" crossorigin="anonymous"></script>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Vit'Amiens</title>
+        <link rel="icon" href="favicon.ico"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <meta name="description" content="Map interactive du Pole science à Amiens pour les jeunes étudiants"/>
+        <meta name="author" content="Loup Prévost, Libraire Alexandre, Saleh Amari"/>
+        <meta name="keywords" content="map interactive, amiens, étudiant, pôle science"/>
+    </head>
+    <body>
+        <div id="topFooter">
+            <a href="index.html">  
+                <div id="banner">
+                    <img class="logo" src="data/img/logo.png" alt="Logo Vit'Amiens" title="Logo Vit'Amiens">
+                    <img class="logoUPJV" src="data/img/logoUPJV.png" alt="Logo de l'UPJV" title="Logo de l'UPJV">
+                    <p style="text-align: center;font-size:45px;font-family: Calibri, sans-serif;padding-top:0.5vh;"><b>VIT'AMIENS</b></p>
+                </div>
+            </a>
+            <div id="content">
+                <form style="float:left;height: calc(100vh - 110px); width: calc(25% - 3px);border-right:3px solid black;">                   
+                    <div class="searchContainer">
+                        <input type="text" id="search" placeholder="Recherche dans UFR des Sciences..... " required>
+                        <div class="loupe" onclick="validateSearch();"><i class="fa-solid fa-magnifying-glass fa-lg"  alt="rechercher"></i></div>
+                    </div>
+                    <p id="test"></p>
+                </form>
+                
+            
+                <div id="actualMap" style="float:left;height: calc(100vh - 110px); width: 75%;">
+                    <img class="plan" usemap="#mapUFRSciences" src="data/img/plan.jpg" alt="Plan UFR des Sciences">
+                </div>
+            </div>  
+        </div>
+        <div id="footer">
+            <a href="info.html"><img class="infoLogo" src="data/img/info.png" alt="Plan UFR des Sciences"></a>
+            <p style="text-align: center;font-size:20px;font-family: Calibri, sans-serif;padding-top:0.5vh;">UFR DES SCIENCES - UPJV AMIENS</p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
+        <script>
+            $(document).ready(function(e) {
+                $('img[usemap]').rwdImageMaps();
+            });
+            </script>
+    </body>
+</html>
+
+<map name="mapUFRSciences">
+    <area shape="poly" id="F" onclick="changeActualMap('F');" coords="368,353,407,353,407,421,368,421" href="#" alt="Batiment F">
+    <area shape="poly" id="I" onclick="changeActualMap('I');" coords="453,415,429,386,430,380,444,372,461,366,467,370,468,408,462,410" href="#" alt="Batiment I">
+    <area shape="poly" id="H" onclick="changeActualMap('H');" coords="476,344,528,344,528,385,476,385" href="#" alt="Batiment H">
+    <area shape="poly" id="D" onclick="changeActualMap('D');" coords="527,408,605,405,605,425,528,428" href="#" alt="Batiment D">
+    <area shape="poly" id="E" onclick="changeActualMap('E');" coords="528,431,563,430,565,490,529,492" href="#" alt="Batiment E">
+    <area shape="poly" id="G" onclick="changeActualMap('G');" coords="567,429,605,427,610,509,568,510,567,501,443,505,443,501,569,493" href="#" alt="Batiment G">
+    <area shape="poly" id="A" onclick="changeActualMap('A');" coords="609,501,631,503,631,545,614,547,613,509,610,509" href="#" alt="Batiment A">
+    <area shape="poly" id="B" onclick="changeActualMap('B');" coords="443,508,564,504,565,518,443,522" href="#" alt="Batiment B">
+
+</map>
+
+<script>
+var test = document.getElementById("test");
+
+function changeActualMap(str){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("actualMap").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","php/changeMap.php?map="+str, true);
+    xmlhttp.send();
+}
+
+function validateSearch() {
+    var searchInput = document.getElementById("search").value;
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var result = this.responseText;
+            let batimentArray = result.split("|"); // tableau contenant tous les noms des batiments voir avec alex
+            //voir comment on recherche les batiments (cest la merde)
+
+        }
+    };
+    xmlhttp.open("GET","php/BatListe.php", true);
+    xmlhttp.send();
+} 
+
+
+
+</script>
