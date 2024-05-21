@@ -17,5 +17,8 @@ Dans le cadre de notre M1 MIAGE, nous avons eu un projet qui propose aux futurs 
 
 ## Captures d'écran
 ![Capture d'écran 1](Capture.JPG)
+
+**Accueil**
+
 ![Capture d'écran 2](Capture1.JPG)
 
