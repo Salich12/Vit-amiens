@@ -1,13 +1,21 @@
-Projet 3 : Vit’Amiens
+# Projet 3 : Vit’Amiens
 
-Catégorie: Web
+## Catégorie
+**Web**
 
-Outils utilisés  : HTML-5, CSS-3, Javascript, Php
+## Outils utilisés
+**HTML-5, CSS-3, Javascript, Php**
 
-Année : 2022 - 2023
+## Année
+**2022 - 2023**
 
-Encadré par :Mme Groux Dominique
+## Encadré par
+**Mme Groux Dominique**
 
-Détail de projet : 
-Dans le cadre de notre M1 MIAGE, Nous avons eu un projet qui propose aux futurs étudiants une application web comprenant une carte interactive de l’UFR des Sciences d’Amiens.
-Notre application Web aura pour but de localiser les bâtiments, les amphithéâtres et les salles de l’UFR des Sciences, car les étudiants primo-entrants se sentent souvent perdus.
+## Détail de projet
+Dans le cadre de notre M1 MIAGE, nous avons eu un projet qui propose aux futurs étudiants une application web comprenant une carte interactive de l’UFR des Sciences d’Amiens. Notre application Web aura pour but de localiser les bâtiments, les amphithéâtres et les salles de l’UFR des Sciences, car les étudiants primo-entrants se sentent souvent perdus.
+
+## Captures d'écran
+![Capture d'écran 1](url-de-votre-capture-ecran-1)
+![Capture d'écran 2](url-de-votre-capture-ecran-2)
+![Capture d'écran 3](url-de-votre-capture-ecran-3)
