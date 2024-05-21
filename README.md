@@ -16,6 +16,6 @@
 Dans le cadre de notre M1 MIAGE, nous avons eu un projet qui propose aux futurs étudiants une application web comprenant une carte interactive de l’UFR des Sciences d’Amiens. Notre application Web aura pour but de localiser les bâtiments, les amphithéâtres et les salles de l’UFR des Sciences, car les étudiants primo-entrants se sentent souvent perdus.
 
 ## Captures d'écran
-![Capture d'écran 1](Capture.png)
-![Capture d'écran 2](Capture1.png)
+![Capture d'écran 1](Capture.JPG)
+![Capture d'écran 2](Capture1.JPG)
 
